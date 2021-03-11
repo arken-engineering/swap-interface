@@ -1,6 +1,6 @@
 import React from 'react'
 import { useWeb3React } from '@web3-react/core'
-import { Button, ButtonProps, useWalletModal, ConnectorNames } from '@pancakeswap-libs/uikit'
+import { Button, ButtonProps, useWalletModal, ConnectorNames } from '@arcanefinance/uikit'
 import { connectorsByName } from 'connectors'
 import useI18n from 'hooks/useI18n'
 

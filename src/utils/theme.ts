@@ -16,7 +16,7 @@ export function getThemeCache(): boolean | null {
 
 export function setThemeCache(isDark: boolean) {
   try {
-    localStorage.setItem(CACHE_KEY, JSON.stringify(isDark))
+    //localStorage.setItem(CACHE_KEY, JSON.stringify(isDark)) // TODO: binzy
   } catch (error) {
     console.error(error)
   }

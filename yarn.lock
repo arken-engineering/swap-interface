@@ -2095,9 +2095,9 @@
     mkdirp "^1.0.4"
     rimraf "^2.7.1"
 
-"@pancakeswap-libs/eslint-config-pancake@1.0.0":
+"@arcanefinance/eslint-config@1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@pancakeswap-libs/eslint-config-pancake/-/eslint-config-pancake-1.0.0.tgz#da5c17842d1cb0d575bca3de0c9404386c386151"
+  resolved "https://registry.yarnpkg.com/@arcanefinance/eslint-config/-/eslint-config-1.0.0.tgz#da5c17842d1cb0d575bca3de0c9404386c386151"
   integrity sha512-/rE1jQsgDV+jUvYIJKzIlLGFSYwku8K67nprRMmsbhdG+FHdBJnclIyIbVY1NnVtuwGaP+uBQiS/tn6Zhiyx8w==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.7.0"
@@ -2109,9 +2109,9 @@
     eslint-plugin-react "^7.21.5"
     eslint-plugin-react-hooks "^4.0.0"
 
-"@pancakeswap-libs/sdk@1.0.1":
+"@arcanefinance/sdk@1.0.1":
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@pancakeswap-libs/sdk/-/sdk-1.0.1.tgz#602e6da34fd5bde0f3c869f9abe63bb5f4aaf063"
+  resolved "https://registry.yarnpkg.com/@arcanefinance/sdk/-/sdk-1.0.1.tgz#602e6da34fd5bde0f3c869f9abe63bb5f4aaf063"
   integrity sha512-N4EZlAD0PD7lgVEE8jOufUPRNBvcR3STSjBC9QVwoKmmH1czEY9lu8/SySecKchZtSi66qAfsrghkdXo8tnJsg==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
@@ -2122,9 +2122,9 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@pancakeswap-libs/uikit@^0.13.1":
+"@arcanefinance/uikit@^0.13.1":
   version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@pancakeswap-libs/uikit/-/uikit-0.13.1.tgz#75e9feaa46ea9e195381c5a218b7652f08b19c5e"
+  resolved "https://registry.yarnpkg.com/@arcanefinance/uikit/-/uikit-0.13.1.tgz#75e9feaa46ea9e195381c5a218b7652f08b19c5e"
   integrity sha512-1Fs0mAFK3xRLYw9elSv3lvDDDnLJlv8bNWMug/Z29jCIoKBRM83P9TeijB8vj6dLhu6srs9p9NYTixgxURGDpQ==
   dependencies:
     "@types/lodash" "^4.14.162"

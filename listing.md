@@ -1,16 +1,16 @@
 # Pancake Swap Listing Tutorial
 
-So, you’ve come, you’ve tasted our secret sauce 🥞 and now you’re wanting to be a part of the PancakeSwap kitchen.
+So, you’ve come, you’ve tasted our secret sauce 🥞 and now you’re wanting to be a part of the ArcaneFinance kitchen.
 
-If you’re interested in listing on the PancakeSwap exchange, follow this guide closely. Any PRs or Issues created in the github will be immediately closed if they do not meet the requirements.
+If you’re interested in listing on the ArcaneFinance exchange, follow this guide closely. Any PRs or Issues created in the github will be immediately closed if they do not meet the requirements.
 
 ## Requirements
 
 
-- Apply to host a Syrup Pool or an IFO PancakeSwap. [Form here.](https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform) We will review these as soon as possible but due to high demand there may be some delay.
+- Apply to host a Syrup Pool or an IFO ArcaneFinance. [Form here.](https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform) We will review these as soon as possible but due to high demand there may be some delay.
 
 
-- Open a [listing request issue](https://github.com/pancakeswap/pancake-swap-interface/issues/new?assignees=Chef-Chungus&labels=listing&template=listing-request.md&title=%5BListing%5D+Request+listing+for+%7BADD+TOKEN+NAME+HERE%7D). Someone from the team will review your application.
+- Open a [listing request issue](https://github.com/arcanedefi/pancake-swap-interface/issues/new?assignees=Chef-Chungus&labels=listing&template=listing-request.md&title=%5BListing%5D+Request+listing+for+%7BADD+TOKEN+NAME+HERE%7D). Someone from the team will review your application.
 
 ## Reviews
 

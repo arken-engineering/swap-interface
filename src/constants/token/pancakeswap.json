@@ -1,5 +1,5 @@
 {
-  "name": "pancakeswap",
+  "name": "arcanefinance",
   "timestamp": "2020-08-25T15:41:29.665Z",
   "version": {
     "major": 1,
@@ -200,7 +200,7 @@
       "decimals": 18
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "ArcaneFinance Token",
       "symbol": "CAKE",
       "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
       "chainId": 56,

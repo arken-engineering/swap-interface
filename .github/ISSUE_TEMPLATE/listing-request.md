@@ -8,7 +8,7 @@ assignees: Chef-Chungus
 
 ### Declaration
 
-[ ] I confirm that I have filled out the PancakeSwap Syprup pool or IFO application
+[ ] I confirm that I have filled out the ArcaneFinance Syprup pool or IFO application
 [ ] I understand that if I have not submitted an application for a Syrup pool or IFO, my PR/issue will be closed.
 
 ### Token information

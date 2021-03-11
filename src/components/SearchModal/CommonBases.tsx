@@ -1,6 +1,6 @@
 import React from 'react'
-import { Text } from '@pancakeswap-libs/uikit'
-import { ChainId, Currency, currencyEquals, ETHER, Token } from '@pancakeswap-libs/sdk'
+import { Text } from '@arcanefinance/uikit'
+import { ChainId, Currency, currencyEquals, ETHER, Token } from '@arcanefinance/sdk'
 import styled from 'styled-components'
 
 import { SUGGESTED_BASES } from '../../constants'
