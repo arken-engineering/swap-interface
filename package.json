@@ -1,8 +1,9 @@
 {
   "name": "@arcanefinance/exchange-interface",
   "description": "Arcane Exchange Interface",
+  "version": "0.1.0",
   "homepage": ".",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@binance-chain/bsc-connector": "^1.0.0",
     "@crowdin/crowdin-api-client": "^1.8.16",
