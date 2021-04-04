@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://arcane.finance/',
+    href: 'https://rune.farm/',
   },
   {
     label: 'Trade',
@@ -24,22 +24,22 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://arcane.finance/farms',
+    href: 'https://rune.farm/farms',
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://arcane.finance/syrup',
+    href: 'https://rune.farm/syrup',
   },
   {
     label: 'Lottery',
     icon: 'TicketIcon',
-    href: 'https://arcane.finance/lottery',
+    href: 'https://rune.farm/lottery',
   },
   {
     label: 'NFT',
     icon: 'NftIcon',
-    href: 'https://arcane.finance/nft',
+    href: 'https://rune.farm/nft',
   },
   {
     label: 'Teams & Profile',
@@ -48,15 +48,15 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Leaderboard',
-        href: 'https://arcane.finance/teams',
+        href: 'https://rune.farm/teams',
       },
       {
         label: 'Task Center',
-        href: 'https://arcane.finance/profile/tasks',
+        href: 'https://rune.farm/profile/tasks',
       },
       {
         label: 'Your Profile',
-        href: 'https://arcane.finance/profile',
+        href: 'https://rune.farm/profile',
       },
     ],
   },
@@ -66,26 +66,26 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Overview',
-        href: 'https://info.arcane.finance',
+        href: 'https://info.rune.farm',
       },
       {
         label: 'Tokens',
-        href: 'https://info.arcane.finance/tokens',
+        href: 'https://info.rune.farm/tokens',
       },
       {
         label: 'Pairs',
-        href: 'https://info.arcane.finance/pairs',
+        href: 'https://info.rune.farm/pairs',
       },
       {
         label: 'Accounts',
-        href: 'https://info.arcane.finance/accounts',
+        href: 'https://info.rune.farm/accounts',
       },
     ],
   },
   {
     label: 'IFO',
     icon: 'IfoIcon',
-    href: 'https://arcane.finance/ifo',
+    href: 'https://rune.farm/ifo',
   },
   {
     label: 'More',
@@ -93,7 +93,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Voting',
-        href: 'https://voting.arcane.finance',
+        href: 'https://voting.rune.farm',
       },
       {
         label: 'Github',
@@ -101,7 +101,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Docs',
-        href: 'https://docs.arcane.finance',
+        href: 'https://docs.rune.farm',
       },
       {
         label: 'Blog',

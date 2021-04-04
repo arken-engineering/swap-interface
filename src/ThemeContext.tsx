@@ -9,12 +9,12 @@ export interface ThemeContextType {
   toggleTheme: () => void;
 }
 
-const ThemeContext = React.createContext<ThemeContextType>({ isDark: false, toggleTheme: () => null })
+const ThemeContext = React.createContext<ThemeContextType>({ isDark: true, toggleTheme: () => null })
 
 const ThemeContextProvider: React.FC = ({ children }) => {
   const [isDark, setIsDark] = useState(() => {
-    const isDarkUserSetting = localStorage.getItem(CACHE_KEY)
-    return isDarkUserSetting ? JSON.parse(isDarkUserSetting) : false
+    // const isDarkUserSetting = localStorage.getItem(CACHE_KEY)
+    return true // isDarkUserSetting ? JSON.parse(isDarkUserSetting) : false
   })
 
   const toggleTheme = () => {

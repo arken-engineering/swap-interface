@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Input, Text } from '@arcanefinance/uikit'
 import { useUserDeadline } from 'state/user/hooks'
 import QuestionHelper from '../QuestionHelper'
-import TranslatedText from '../TranslatedText'
 
 const StyledTransactionDeadlineSetting = styled.div`
   margin-bottom: 16px;
@@ -29,7 +28,12 @@ const Field = styled.div`
   }
 `
 
-const TransactionDeadlineSetting = () => {
+type TransactionDeadlineSettingModalProps = {
+  translateString: (translationId: number, fallback: string) => (string)
+}
+
+const TransactionDeadlineSetting = ({ translateString }: TransactionDeadlineSettingModalProps) => {
+  const TranslateString = translateString
   const [deadline, setDeadline] = useUserDeadline()
   const [value, setValue] = useState(deadline / 60) // deadline in minutes
   const [error, setError] = useState<string | null>(null)
@@ -47,20 +51,20 @@ const TransactionDeadlineSetting = () => {
         setDeadline(rawValue)
         setError(null)
       } else {
-        setError('Enter a valid deadline')
+        setError(TranslateString(1150, 'Enter a valid deadline'))
       }
     } catch {
-      setError('Enter a valid deadline')
+      setError(TranslateString(1150, 'Enter a valid deadline'))
     }
-  }, [value, setError, setDeadline])
+  }, [value, setError, setDeadline, TranslateString])
 
   return (
     <StyledTransactionDeadlineSetting>
       <Label>
-        <Text style={{ fontWeight: 600 }}>
-          <TranslatedText translationId={90}>Transaction deadline</TranslatedText>
-        </Text>
-        <QuestionHelper text="Your transaction will revert if it is pending for more than this long." />
+        <Text style={{ fontWeight: 600 }}>{TranslateString(90, 'Transaction deadline')}</Text>
+        <QuestionHelper
+          text={TranslateString(188, 'Your transaction will revert if it is pending for more than this long.')}
+        />
       </Label>
       <Field>
         <Input type="number" step="1" min="1" value={value} onChange={handleChange} />

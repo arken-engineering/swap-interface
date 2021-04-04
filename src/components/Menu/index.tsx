@@ -1,16 +1,17 @@
 import React, { useContext } from 'react'
-import { Menu as UikitMenu, ConnectorNames } from '@arcanefinance/uikit'
+import { Menu as UikitMenu} from '@arcanefinance/uikit'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'constants/localisation/languageCodes'
 import { LanguageContext } from 'hooks/LanguageContext'
 import useTheme from 'hooks/useTheme'
 import useGetPriceData from 'hooks/useGetPriceData'
 import useGetLocalProfile from 'hooks/useGetLocalProfile'
-import { connectorsByName } from 'connectors'
+import useAuth from 'hooks/useAuth'
 import links from './config'
 
 const Menu: React.FC = (props) => {
-  const { account, activate, deactivate } = useWeb3React()
+  const { account } = useWeb3React()
+  const { login, logout } = useAuth()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const priceData = useGetPriceData()
@@ -21,19 +22,14 @@ const Menu: React.FC = (props) => {
     <UikitMenu
       links={links}
       account={account as string}
-      login={(connectorId: ConnectorNames) => {
-        const connector = connectorsByName[connectorId]
-        if (connector) {
-          activate(connector)
-        }
-      }}
-      logout={deactivate}
+      login={login}
+      logout={logout}
       isDark={isDark}
       toggleTheme={toggleTheme}
       currentLang={selectedLanguage?.code || ''}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      cakePriceUsd={cakePriceUsd}
+      runePriceUsd={cakePriceUsd}
       profile={profile}
       {...props}
     />
