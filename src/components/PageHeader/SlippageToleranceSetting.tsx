@@ -41,9 +41,10 @@ const Label = styled.div`
 `
 
 const predefinedValues = [
-  { label: '0.1%', value: 0.1 },
-  { label: '0.5%', value: 0.5 },
-  { label: '1%', value: 1 },
+  { label: '0.8%', value: 0.8 },
+  { label: '1.2%', value: 1.2 },
+  { label: '2%', value: 2 },
+  { label: '3%', value: 3 },
 ]
 
 type SlippageToleranceSettingsModalProps = {
@@ -59,7 +60,7 @@ const SlippageToleranceSettings = ({ translateString }: SlippageToleranceSetting
     const { value: inputValue } = evt.target
     setValue(parseFloat(inputValue))
   }
-
+console.log(userSlippageTolerance)
   // Updates local storage if value is valid
   useEffect(() => {
     try {

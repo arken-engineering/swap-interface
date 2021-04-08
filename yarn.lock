@@ -103,10 +103,10 @@
     truffle-flattener "^1.4.4"
     truffle-hdwallet-provider "^1.0.17"
 
-"@arcanefinance/uikit@^0.13.9":
-  version "0.13.9"
-  resolved "https://registry.yarnpkg.com/@arcanefinance/uikit/-/uikit-0.13.9.tgz#8c24c00702c6abcd91f5576b1ac07e41fd07af62"
-  integrity sha512-dKdB5dodsEhSvIb11OiYuWd8eAcKUj8VlScU9ojsELhBAi5YkCJ3ALYNFcbqDNRPN8LnobkzpkRvKMGovOvnFA==
+"@arcanefinance/uikit@^0.13.22":
+  version "0.13.22"
+  resolved "https://registry.yarnpkg.com/@arcanefinance/uikit/-/uikit-0.13.22.tgz#43dc6dcfc5fd02b7495e6dac7d696ae04a21455b"
+  integrity sha512-laE3h6kzej6jmUvSNCmK8/S/ij8Hk3xZbyZ8W/GfX9NkjSdfZVXhP3tw3rotpwNN3o6c4PUgaWQ78Ms4G6c33g==
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"

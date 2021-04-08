@@ -433,7 +433,7 @@ export default function AddLiquidity({
                     }
                     width="100%"
                   >
-                    {error ?? 'Supply'}
+                    Supply {error ?? ''}
                   </Button>
                 </AutoColumn>
               )}

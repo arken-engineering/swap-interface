@@ -9,103 +9,130 @@ const config: MenuEntry[] = [
   {
     label: 'Trade',
     icon: 'TradeIcon',
-    initialOpenState: true,
     items: [
       {
         label: 'Exchange',
-        href: '/swap',
+        href: 'https://swap.rune.farm',
       },
       {
         label: 'Liquidity',
-        href: '/pool',
+        href: 'https://swap.rune.farm/#/pool',
       },
     ],
   },
   {
-    label: 'Farms',
-    icon: 'FarmIcon',
-    href: 'https://rune.farm/farms',
-  },
-  {
-    label: 'Pools',
-    icon: 'PoolIcon',
-    href: 'https://rune.farm/syrup',
-  },
-  {
-    label: 'Lottery',
-    icon: 'TicketIcon',
-    href: 'https://rune.farm/lottery',
-  },
-  {
-    label: 'NFT',
+    label: 'Game',
     icon: 'NftIcon',
-    href: 'https://rune.farm/nft',
-  },
-  {
-    label: 'Teams & Profile',
-    icon: 'GroupsIcon',
-    calloutClass: 'rainbow',
+    initialOpenState: true,
     items: [
       {
-        label: 'Leaderboard',
-        href: 'https://rune.farm/teams',
-      },
-      {
-        label: 'Task Center',
-        href: 'https://rune.farm/profile/tasks',
-      },
-      {
-        label: 'Your Profile',
+        label: 'My Profile',
         href: 'https://rune.farm/profile',
       },
-    ],
+      {
+        label: 'My Inventory',
+        href: 'https://rune.farm/me',
+      },
+      {
+        label: 'Farms',
+        // icon: 'FarmIcon',
+        href: 'https://rune.farm/farms',
+      },
+      {
+        label: 'Pools',
+        // icon: 'PoolIcon',
+        href: 'https://rune.farm/pools',
+      },
+      {
+        label: 'Guilds',
+        // icon: 'GroupsIcon',
+        href: 'https://rune.farm/guilds',
+      },
+    ]
   },
+  // {
+  //   label: 'Gambling',
+  //   icon: 'TicketIcon',
+  //   href: '/gambling',
+  // },
+  // {
+  //   label: 'Marketplace',
+  //   icon: 'NftIcon',
+  //   href: '/marketplace',
+  // },
   {
-    label: 'Info',
+    label: 'Links',
     icon: 'InfoIcon',
     items: [
       {
-        label: 'Overview',
-        href: 'https://info.rune.farm',
+        label: 'Trade: RuneSwap',
+        href: 'https://swap.rune.farm/#/swap',
       },
       {
-        label: 'Tokens',
-        href: 'https://info.rune.farm/tokens',
+        label: 'Trade: PancakeSwap',
+        href: 'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0xa9776b590bfc2f956711b3419910a5ec1f63153e',
+      },
+      // {
+      //   label: 'CoinGecko (TODO)',
+      //   href: 'https://www.coingecko.com/en/coins/rune-farm',
+      // },
+      // {
+      //   label: 'CoinMarketCap (TODO)',
+      //   href: 'https://coinmarketcap.com/currencies/rune-farm/',
+      // },
+      {
+        label: 'Chart: AstroTools',
+        href: 'https://app.astrotools.io/pancake-pair-explorer/0xf9444c39bbdcc3673033609204f8da00d1ae3f52',
       },
       {
-        label: 'Pairs',
-        href: 'https://info.rune.farm/pairs',
+        label: 'Chart: Swapp',
+        href: 'https://goswapp-bsc.web.app/0xa9776b590bfc2f956711b3419910a5ec1f63153e',
       },
       {
-        label: 'Accounts',
-        href: 'https://info.rune.farm/accounts',
+        label: 'Chart: Poo',
+        href: 'https://poocoin.app/tokens/0xa9776b590bfc2f956711b3419910a5ec1f63153e',
       },
     ],
   },
   {
-    label: 'IFO',
-    icon: 'IfoIcon',
-    href: 'https://rune.farm/ifo',
-  },
-  {
-    label: 'More',
+    label: 'More Info',
     icon: 'MoreIcon',
     items: [
+      // {
+      //   label: 'Governance',
+      //   href: '/governance',
+      // },
       {
-        label: 'Voting',
-        href: 'https://voting.rune.farm',
+        label: 'Documentation',
+        href: 'https://docs.rune.farm/',
+      },
+      {
+        label: 'Tokenomics',
+        href: 'https://docs.rune.farm/tokenomics/rune',
+      },
+      {
+        label: 'Roadmap',
+        href: 'https://docs.rune.farm/resources/roadmap',
+      },
+      {
+        label: 'FAQ',
+        href: 'https://docs.rune.farm/resources/faq',
+      },
+      {
+        label: 'Polls',
+        href: 'https://docs.rune.farm/resources/polls',
       },
       {
         label: 'Github',
-        href: 'https://github.com/arcanedefi',
+        href: 'https://github.com/runefarm',
       },
       {
-        label: 'Docs',
-        href: 'https://docs.rune.farm',
+        label: 'Medium',
+        href: 'https://runefarm.medium.com',
       },
       {
-        label: 'Blog',
-        href: 'https://medium.com/arcanefinance',
+        label: 'Twitter',
+        href: 'https://twitter.com/RuneFarm',
       },
     ],
   },
