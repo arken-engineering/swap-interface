@@ -272,6 +272,7 @@ const Swap = () => {
 
   const runeCurrency = useCurrency('0xa9776b590bfc2f956711b3419910a5ec1f63153e')
   const elCurrency = useCurrency('0x210c14fbecc2bd9b6231199470da12ad45f64d45')
+  const tirCurrency = useCurrency('0x125a3e00a9a11317d4d95349e68ba0bc744addc4')
 
   useEffect(() => {
     if (init) return
@@ -493,7 +494,8 @@ const Swap = () => {
           </CardBody>
           <RuneHolder>
             <Rune src="https://rune.farm/images/rune-200x200.png" onClick={() => onCurrencySelection(Field.OUTPUT, runeCurrency!)} />
-            <Rune src="https://rune.farm/images/runes/el.png" onClick={() => onCurrencySelection(Field.OUTPUT, elCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/el.png" onClick={() => onCurrencySelection(Field.OUTPUT, elCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/tir.png" onClick={() => onCurrencySelection(Field.OUTPUT, tirCurrency!)} />
           </RuneHolder>
         </Wrapper>
       </AppBody>

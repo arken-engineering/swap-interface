@@ -27,6 +27,14 @@
       "logoURI": "https://rune.farm/images/runes/el.png"
     },
     {
+      "name": "TIR Rune",
+      "symbol": "TIR",
+      "address": "0x125a3e00a9a11317d4d95349e68ba0bc744addc4",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/runes/tir.png"
+    },
+    {
       "name": "WBNB Token",
       "symbol": "WBNB",
       "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",

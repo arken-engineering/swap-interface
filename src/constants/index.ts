@@ -9,6 +9,7 @@ type ChainTokenList = {
 
 export const RUNE = new Token(ChainId.MAINNET, '0xa9776b590bfc2f956711b3419910a5ec1f63153e', 18, 'RUNE', 'Rune Token')
 export const EL = new Token(ChainId.MAINNET, '0x210c14fbecc2bd9b6231199470da12ad45f64d45', 18, 'EL', 'EL Rune')
+export const TIR = new Token(ChainId.MAINNET, '0x125a3e00a9a11317d4d95349e68ba0bc744addc4', 18, 'TIR', 'TIR Rune')
 export const WBNB = new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB')
 export const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Dai Stablecoin')
 export const BUSD = new Token(ChainId.MAINNET, '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18, 'BUSD', 'Binance USD')
@@ -76,6 +77,22 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
     ],
     [
       EL,
+      BUSD
+    ],
+    [
+      TIR,
+      EL
+    ],
+    [
+      TIR,
+      RUNE
+    ],
+    [
+      TIR,
+      WBNB
+    ],
+    [
+      TIR,
       BUSD
     ],
     [
