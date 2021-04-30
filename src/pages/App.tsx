@@ -19,6 +19,37 @@ import { TranslationsContext } from '../hooks/TranslationsContext'
 import Menu from '../components/Menu'
 import useGetDocumentTitlePrice from '../hooks/useGetDocumentTitlePrice'
 
+
+function getZoom() {
+  const stdWidth = 1200
+  const stdHeight = 1000
+
+  const width = window.innerWidth
+  const height = window.innerHeight
+
+  return Math.min(height / stdHeight, width / stdWidth)
+}
+
+function autoSize() {
+  if (!window || !window.document) return
+  if (window.innerWidth >= 968) {
+    const zoomFactor = getZoom()
+
+    window.document.querySelector('html')!.style.setProperty('zoom', `${zoomFactor}`)
+
+    const sliders = document.getElementsByClassName('slider')
+    for (let i = 0; i < sliders.length; i++) {
+      // @ts-ignore
+      sliders[i].style.setProperty('zoom', 1 / zoomFactor)
+    }
+  } else {
+    window.document.querySelector('html')!.style.setProperty('zoom', '1')
+  }
+}
+
+autoSize()
+
+
 const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
@@ -63,6 +94,22 @@ export default function App() {
   // }
 
   // const stringTranslationsApi = new StringTranslations(credentials)
+
+  useEffect(() => {
+    setInterval(autoSize, 300)
+
+    window.addEventListener('resize', autoSize, true)
+
+    document.addEventListener('dragover', (event) => {
+      event.preventDefault()
+      return false
+    })
+
+    document.addEventListener('drop', (event) => {
+      event.preventDefault()
+      return false
+    })
+  }, [])
 
   const getStoredLang = (storedLangCode: string) => {
     return allLanguages.filter((language) => {
