@@ -103,10 +103,10 @@
     truffle-flattener "^1.4.4"
     truffle-hdwallet-provider "^1.0.17"
 
-"@arcanefinance/uikit@^0.13.50":
-  version "0.13.50"
-  resolved "https://registry.yarnpkg.com/@arcanefinance/uikit/-/uikit-0.13.50.tgz#394de0db57062bf0bbe98c17618a296eb244ec11"
-  integrity sha512-cUfo4T3Auodivx2/4Uz7tsKOcCJKKGHvZoozHr25h7v1VKx7GUKtouUcoKAb4todrr/t1n4yMoJy0sKKu/wvhw==
+"@arcanefinance/uikit@^0.13.56":
+  version "0.13.56"
+  resolved "https://registry.yarnpkg.com/@arcanefinance/uikit/-/uikit-0.13.56.tgz#0371a0a701f75d09ce58ba5e2495813fc3533704"
+  integrity sha512-y7cwyL4Cuk/oPpzzUgodTvJGGR57CDbUcrqYkT40gA0csMDcF2zOXTcnOuR0MT9QenkU9IhEfspvWUpiirTxvg==
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"
@@ -6563,9 +6563,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001125, caniuse-lite@^1.0.30001173:
-  version "1.0.30001178"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001178.tgz#3ad813b2b2c7d585b0be0a2440e1e233c6eabdbc"
-  integrity sha512-VtdZLC0vsXykKni8Uztx45xynytOi71Ufx9T8kHptSw9AL4dpqailUJJHavttuzUe1KYuBYtChiWv+BAb7mPmQ==
+  version "1.0.30001247"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001247.tgz"
+  integrity sha512-4rS7co+7+AoOSPRPOPUt5/GdaqZc0EsUpWk66ofE3HJTAajUK2Ss2VwoNzVN69ghg8lYYlh0an0Iy4LIHHo9UQ==
 
 capture-exit@^2.0.0:
   version "2.0.0"

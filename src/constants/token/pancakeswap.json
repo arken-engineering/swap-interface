@@ -59,6 +59,102 @@
       "logoURI": "https://rune.farm/images/farms/ith.png"
     },
     {
+      "name": "Tal Rune",
+      "symbol": "TAL",
+      "address": "0x5DE72A6fca2144Aa134650bbEA92Cc919244F05D",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/tal.png"
+    },
+    {
+      "name": "Ral Rune",
+      "symbol": "RAL",
+      "address": "0x2F25DbD430CdbD1a6eC184c79C56C18918fcc97D",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/ral.png"
+    },
+    {
+      "name": "Ort Rune",
+      "symbol": "ORT",
+      "address": "0x33bc7539D83C1ADB95119A255134e7B584cd5c59",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/ort.png"
+    },
+    {
+      "name": "Thul Rune",
+      "symbol": "THUL",
+      "address": "0x1fC5bffCf855B9D7897F1921363547681F6847Aa",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/thul.png"
+    },
+    {
+      "name": "Amn Rune",
+      "symbol": "AMN",
+      "address": "0x346C03fe8BE489baAAc5CE67e817Ff11fb580F98",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/amn.png"
+    },
+    {
+      "name": "Sol Rune",
+      "symbol": "SOL",
+      "address": "0x4ffd3b8ba90f5430cda7f4cc4c0a80df3cd0e495",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/sol.png"
+    },
+    {
+      "name": "Shael Rune",
+      "symbol": "SHAEL",
+      "address": "0x56DeFe2310109624c20c2E985c3AEa63b9718319",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/shael.png"
+    },
+    {
+      "name": "Dol Rune",
+      "symbol": "DOL",
+      "address": "0x94F2E23c7422fa8c5A348a0E6D7C05b0a6C8a5b8",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/dol.png"
+    },
+    {
+      "name": "Hel Rune",
+      "symbol": "HEL",
+      "address": "0x0D3877152BaaC86D42A4123ABBeCd1178d784cC7",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/hel.png"
+    },
+    {
+      "name": "Io Rune",
+      "symbol": "IO",
+      "address": "0xa00672c2a70E4CD3919afc2043b4b46e95041425",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/io.png"
+    },
+    {
+      "name": "Lum Rune",
+      "symbol": "LUM",
+      "address": "0xD481F4eA902e207AAda9Fa093f80d50B19444253",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/lum.png"
+    },
+    {
+      "name": "Zod Rune",
+      "symbol": "ZOD",
+      "address": "0x3e151ca82b3686f555c381530732df1cfc3c7890",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://rune.farm/images/farms/zod.png"
+    },
+    {
       "name": "WBNB Token",
       "symbol": "WBNB",
       "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",

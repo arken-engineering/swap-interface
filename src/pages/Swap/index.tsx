@@ -54,6 +54,28 @@ const Swap = () => {
   const loadedUrlParams = useDefaultsFromURLSearch()
   const TranslateString = useI18n()
 
+  const wbnbCurrency = useCurrency('0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c')
+  const safeCurrency = useCurrency('0x8076C74C5e3F5852037F31Ff0093Eeb8c8ADd8D3')
+  const runeCurrency = useCurrency('0xa9776b590bfc2f956711b3419910a5ec1f63153e')
+  const elCurrency = useCurrency('0x210c14fbecc2bd9b6231199470da12ad45f64d45')
+  const eldCurrency = useCurrency('0xe00b8109bcb70b1edeb4cf87914efc2805020995')
+  const tirCurrency = useCurrency('0x125a3e00a9a11317d4d95349e68ba0bc744addc4')
+  const nefCurrency = useCurrency('0xef4f66506aaaeeff6d10775ad6f994105d8f11b4')
+  const ithCurrency = useCurrency('0x098Afb73F809D8Fe145363F802113E3825d7490C')
+  const talCurrency = useCurrency('0x5DE72A6fca2144Aa134650bbEA92Cc919244F05D')
+  const ralCurrency = useCurrency('0x2F25DbD430CdbD1a6eC184c79C56C18918fcc97D')
+  const ortCurrency = useCurrency('0x33bc7539D83C1ADB95119A255134e7B584cd5c59')
+  const thulCurrency = useCurrency('0x1fC5bffCf855B9D7897F1921363547681F6847Aa')
+  const amnCurrency = useCurrency('0x346C03fe8BE489baAAc5CE67e817Ff11fb580F98')
+  const solCurrency = useCurrency('0x4ffd3b8ba90f5430cda7f4cc4c0a80df3cd0e495')
+  const shaelCurrency = useCurrency('0x56DeFe2310109624c20c2E985c3AEa63b9718319')
+  const dolCurrency = useCurrency('0x94F2E23c7422fa8c5A348a0E6D7C05b0a6C8a5b8')
+  const helCurrency = useCurrency('0x0D3877152BaaC86D42A4123ABBeCd1178d784cC7')
+  const ioCurrency = useCurrency('0xa00672c2a70E4CD3919afc2043b4b46e95041425')
+  const lumCurrency = useCurrency('0xD481F4eA902e207AAda9Fa093f80d50B19444253')
+  
+  
+  
   // token warning stuff
   const [loadedInputCurrency, loadedOutputCurrency] = [
     useCurrency(loadedUrlParams?.inputCurrencyId),
@@ -111,13 +133,13 @@ const Swap = () => {
 
   const handleTypeInput = useCallback(
     (value: string) => {
-      onUserInput(Field.INPUT, value)
+      onUserInput(Field.INPUT, value.indexOf('.') !== -1 && value.indexOf('.') !== value.length -1 && value[value.length-1] !== '0' ? `${Math.floor(parseFloat(parseFloat(value).toFixed(4)) * 1000) / 1000}` : value)
     },
     [onUserInput]
   )
   const handleTypeOutput = useCallback(
     (value: string) => {
-      onUserInput(Field.OUTPUT, value)
+      onUserInput(Field.OUTPUT, value.indexOf('.') !== -1 && value.indexOf('.') !== value.length -1 && value[value.length-1] !== '0' ? `${Math.floor(parseFloat(parseFloat(value).toFixed(4)) * 1000) / 1000}` : value)
     },
     [onUserInput]
   )
@@ -176,11 +198,18 @@ const Swap = () => {
 
   const { priceImpactWithoutFee } = computeTradePriceBreakdown(trade)
 
-  const isExactOutputTrade = trade?.tradeType === TradeType.EXACT_OUTPUT
+  const isWrongSafemoonInput = false // trade && trade.route.input && trade.route.output.symbol! ? trade?.tradeType === TradeType.EXACT_INPUT && ['SAFEMOON'].includes(trade.route.output.symbol!) : false
+  const isWrongRuneOutput = trade && trade.route.input && trade.route.output.symbol! ? trade?.tradeType === TradeType.EXACT_OUTPUT && ['RUNE', 'EL', 'ELD', 'TIR', 'NEF', 'ITH'].includes(trade.route.output.symbol!) : false
 
-  const switchInputAndOutput = () => {
+  const switchOutputAndInput = () => {
     const inputAmount = trade?.inputAmount.toExact()
     onUserInput(Field.INPUT, inputAmount!)
+    // onSwitchTokens()
+  }
+
+  const switchInputAndOutput = () => {
+    const outputAmount = trade?.outputAmount.toExact()
+    onUserInput(Field.OUTPUT, outputAmount!)
     // onSwitchTokens()
   }
 
@@ -193,8 +222,12 @@ const Swap = () => {
     }
     if (!trade) return
 
-    if (trade.tradeType === TradeType.EXACT_OUTPUT) {
+    if (isWrongRuneOutput) {
       alert(`This doesn't work due to the transfer fee. Type in the top input box.`)
+      return
+    }
+    if (isWrongSafemoonInput) {
+      alert(`You'll pay the SafeMoon transfer fee this way. Type in the top bottom box instead.`)
       // // trade.tradeType = TradeType.EXACT_INPUT
       // // const inputAmount = trade.inputAmount
       // // trade.inputAmount = trade.outputAmount
@@ -236,13 +269,15 @@ const Swap = () => {
           txHash: undefined,
         }))
       })
-  }, [priceImpactWithoutFee, swapCallback, setSwapState, trade])
+  }, [priceImpactWithoutFee, isWrongRuneOutput, isWrongSafemoonInput, swapCallback, setSwapState, trade])
 
   // errors
   const [showInverted, setShowInverted] = useState<boolean>(false)
 
   // warnings on slippage
   const priceImpactSeverity = warningSeverity(priceImpactWithoutFee)
+
+  const isTooManyDecimals = false
 
   // show approve flow when: no error on inputs, not approved or pending, or approved in current session
   // never show if price impact is above threshold in non expert mode
@@ -291,7 +326,8 @@ const Swap = () => {
 
   const handleMaxInput = useCallback(() => {
     if (maxAmountInput) {
-      onUserInput(Field.INPUT, maxAmountInput.toExact())
+      const value = maxAmountInput.toExact()
+      onUserInput(Field.INPUT, value.indexOf('.') !== -1 && value.indexOf('.') !== value.length -1 && value[value.length-1] !== '0' ? `${Math.floor(parseFloat(parseFloat(value).toFixed(4)) * 1000) / 1000}` : value)
     }
   }, [maxAmountInput, onUserInput])
 
@@ -305,13 +341,6 @@ const Swap = () => {
     [onCurrencySelection, checkForSyrup]
   )
 
-  const safeCurrency = useCurrency('0x8076C74C5e3F5852037F31Ff0093Eeb8c8ADd8D3')
-  const runeCurrency = useCurrency('0xa9776b590bfc2f956711b3419910a5ec1f63153e')
-  const elCurrency = useCurrency('0x210c14fbecc2bd9b6231199470da12ad45f64d45')
-  const eldCurrency = useCurrency('0xe00b8109bcb70b1edeb4cf87914efc2805020995')
-  const tirCurrency = useCurrency('0x125a3e00a9a11317d4d95349e68ba0bc744addc4')
-  const nefCurrency = useCurrency('0xef4f66506aaaeeff6d10775ad6f994105d8f11b4')
-  const ithCurrency = useCurrency('0x098Afb73F809D8Fe145363F802113E3825d7490C')
 
   useEffect(() => {
     if (init) return
@@ -457,7 +486,7 @@ const Swap = () => {
               )}
             </AutoColumn>
             <BottomGrouping>
-              {isExactOutputTrade ? <Button width="100%" onClick={switchInputAndOutput}>Update</Button> : (
+              {isTooManyDecimals ? <Button width="100%" onClick={switchOutputAndInput}>Update Decimals</Button> :isWrongRuneOutput ? <Button width="100%" onClick={switchOutputAndInput}>Update Price</Button> : isWrongSafemoonInput ? <Button width="100%" onClick={switchInputAndOutput}>Update Price</Button> : (
                 <>
                   {!account ? (
                     <ConnectWalletButton width="100%" />
@@ -548,13 +577,25 @@ const Swap = () => {
           </CardBody>
           <RuneHolder>
           
-            <Rune src="https://safemoon.net/public/img/favicon.png" onClick={() => onCurrencySelection(Field.OUTPUT, safeCurrency!)} />
+            <Rune src="/images/coins/bnb.png" onClick={() => onCurrencySelection(Field.OUTPUT, wbnbCurrency!)} />
+            {/* <Rune src="https://safemoon.net/public/img/favicon.png" onClick={() => onCurrencySelection(Field.OUTPUT, safeCurrency!)} /> */}
             <Rune src="https://rune.farm/images/rune-200x200.png" onClick={() => onCurrencySelection(Field.OUTPUT, runeCurrency!)} />
             <Rune src="https://rune.farm/images/farms/el.png" onClick={() => onCurrencySelection(Field.OUTPUT, elCurrency!)} />
             <Rune src="https://rune.farm/images/farms/eld.png" onClick={() => onCurrencySelection(Field.OUTPUT, eldCurrency!)} />
             <Rune src="https://rune.farm/images/farms/tir.png" onClick={() => onCurrencySelection(Field.OUTPUT, tirCurrency!)} />
             <Rune src="https://rune.farm/images/farms/nef.png" onClick={() => onCurrencySelection(Field.OUTPUT, nefCurrency!)} />
             <Rune src="https://rune.farm/images/farms/ith.png" onClick={() => onCurrencySelection(Field.OUTPUT, ithCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/tal.png" onClick={() => onCurrencySelection(Field.OUTPUT, talCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/ral.png" onClick={() => onCurrencySelection(Field.OUTPUT, ralCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/ort.png" onClick={() => onCurrencySelection(Field.OUTPUT, ortCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/thul.png" onClick={() => onCurrencySelection(Field.OUTPUT, thulCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/amn.png" onClick={() => onCurrencySelection(Field.OUTPUT, amnCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/sol.png" onClick={() => onCurrencySelection(Field.OUTPUT, solCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/shael.png" onClick={() => onCurrencySelection(Field.OUTPUT, shaelCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/dol.png" onClick={() => onCurrencySelection(Field.OUTPUT, dolCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/hel.png" onClick={() => onCurrencySelection(Field.OUTPUT, helCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/io.png" onClick={() => onCurrencySelection(Field.OUTPUT, ioCurrency!)} />
+            <Rune src="https://rune.farm/images/farms/lum.png" onClick={() => onCurrencySelection(Field.OUTPUT, lumCurrency!)} />
           </RuneHolder>
         </Wrapper>
       </AppBody>

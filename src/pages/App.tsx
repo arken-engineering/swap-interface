@@ -47,7 +47,7 @@ function autoSize() {
   }
 }
 
-autoSize()
+// autoSize()
 
 
 const AppWrapper = styled.div`
@@ -95,21 +95,21 @@ export default function App() {
 
   // const stringTranslationsApi = new StringTranslations(credentials)
 
-  useEffect(() => {
-    setInterval(autoSize, 300)
+  // useEffect(() => {
+  //   setInterval(autoSize, 300)
 
-    window.addEventListener('resize', autoSize, true)
+  //   window.addEventListener('resize', autoSize, true)
 
-    document.addEventListener('dragover', (event) => {
-      event.preventDefault()
-      return false
-    })
+  //   document.addEventListener('dragover', (event) => {
+  //     event.preventDefault()
+  //     return false
+  //   })
 
-    document.addEventListener('drop', (event) => {
-      event.preventDefault()
-      return false
-    })
-  }, [])
+  //   document.addEventListener('drop', (event) => {
+  //     event.preventDefault()
+  //     return false
+  //   })
+  // }, [])
 
   const getStoredLang = (storedLangCode: string) => {
     return allLanguages.filter((language) => {
